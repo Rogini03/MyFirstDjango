@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit details</title>
+</head>
+<body>
+<form method="POST">
+    {% csrf_token %}
+    <input type="text"  id="name" name="name" value="{{update.name}}">
+    <input type="text"  id="email" name="email" value="{{update.email}}">
+    <input type="text"  id="course" name="course" value="{{update.course}}">
+    <input type="text" id="joindate"  name="joindate" value="{{update.joindate}}">
+    <input type="submit" value="Update">
+</form>
+</body>
+</html>

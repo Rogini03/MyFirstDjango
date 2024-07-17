@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student details</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/table.css' %}">
+</head>
+<body>
+<table class="redTable">
+    <tr>
+        <th>StudentName</th>
+        <th>StudentClass</th>
+        <th>StudentSection</th>
+        <th>JoinDate</th>
+    </tr>
+    {% for std in students %}
+    <tr>
+        <td>{{std.stdname}}</td>
+        <td>{{std.stdclass}}</td>
+        <td>{{std.stdsection}}</td>
+        <td>{{std.joindate}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

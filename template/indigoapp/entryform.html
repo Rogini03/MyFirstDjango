@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Here</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/table.css' %}">
+</head>
+<body>
+<table class="redTable">
+    <tr>
+        <th>Admission id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Course</th>
+        <th>JoinDate</th>
+    </tr>
+    {% for adm in adm %}
+    <tr>
+        <td>{{adm.id}}</td>
+        <td>{{adm.name}}</td>
+        <td>{{adm.email}}</td>
+        <td>{{adm.course}}</td>
+        <td>{{adm.joindate}}</td>
+        <td><button><a href="/indigo/update/{{adm.id}}">Edit</a></button></td>
+        <td><button><a href="/indigo/delete/{{adm.id}}">Delete</a></button></td>
+    </tr>
+    {% endfor %}
+</table>
+    <a href="/indigo/admdetails/"><button>Add Details</button></a>
+
+</body>
+</html>
